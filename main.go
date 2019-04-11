@@ -13,11 +13,13 @@ import (
 
 var (
 	database string
+	username string
 	password string
 )
 
 func init() {
 	database = "your-database-name"
+	username = "your-user-name"
 	password = "your-password"
 }
 
@@ -40,7 +42,7 @@ func main() {
 	//Create the URI we will use to connect to out cosmosDB
 	connecturi := fmt.Sprintf(
 		"mongodb://%s:%s@%s.documents.azure.com:10255/?ssl=true",
-		database,
+		username,
 		password,
 		database)
 
